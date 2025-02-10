@@ -58,7 +58,8 @@ export async function POST(req: Request) {
         password: hashedPassword,
         verifyCode,
         verifyCodeExpiry: expiryDate,
-        isVerified: false,
+        isVerified: true,// for now lets set it true for all as resend email requires a domain to send email
+        isAdmin: false,
         isAcceptingMessages: true,
         messages: [],
       });

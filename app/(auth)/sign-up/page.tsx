@@ -107,7 +107,7 @@ const page = () => {
           <Button  onClick={verifyUser} className="mt-2">Verify</Button>
         </div>
       
-        <h2 className="text-2xl font-bold text-red-500 text-center">NOTE: Verifying after sign up is mandatory</h2>
+        <h2 className="text-2xl font-bold text-red-500 text-center">NOTE: You are verified by default due to some issues with resend email!!</h2>
         <div className="text-center">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}
