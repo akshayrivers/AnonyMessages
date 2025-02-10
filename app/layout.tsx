@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "@/context/AuthProvider";
@@ -17,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Boilerplate",
-  description: "Boilerplate Next.js App",
+  title: "Anony",
+  description: "Anonymous Messaging App",
 };
 
 export default function RootLayout({
