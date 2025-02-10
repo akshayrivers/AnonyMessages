@@ -1,7 +1,7 @@
 "use client"
 import { verifySchema } from '@/app/schemas/verifySchema'
 import { ApiResponse } from '@/app/types/apiResponse'
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage, Form } from '@/components/ui/form'
+import { FormField, FormItem, FormLabel, FormControl,  FormMessage, Form } from '@/components/ui/form'
 import { useToast } from '@/hooks/use-toast'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios, { AxiosError } from 'axios'
@@ -34,7 +34,7 @@ const VerifyAccount =()=>{
         } catch (error) {
             console.error("Error in code verification",error);
             const axiosError= error as AxiosError<ApiResponse>;
-            let errorMessage = axiosError.response?.data.message;
+            const errorMessage = axiosError.response?.data.message;
             toast({
                 title: "Verification failed",
                 description: errorMessage,
