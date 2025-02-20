@@ -37,7 +37,7 @@ const Navbar = () => {
         <div>
           <Button
           className="w-full md:w-auto font-bold"
-          onClick={() => redirectTo('/u/yolo')}>
+          onClick={() => redirectTo('/u/orange')}>
             Send Anonymous Message to author
           </Button>
         </div>
