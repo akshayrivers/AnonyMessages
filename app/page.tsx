@@ -17,7 +17,6 @@ const HomePage: React.FC = () => {
     }
   };
 
-  // Fetch users from the API with an optional search query.
   const fetchUsers = useCallback(async () => {
     try {
       const query = searchQuery ? `?search=${encodeURIComponent(searchQuery)}` : '';
@@ -37,6 +36,10 @@ const HomePage: React.FC = () => {
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
+  };
+
+  const handleUsernameClick = (selectedUsername: string) => {
+    setUsername(selectedUsername);
   };
 
   return (
@@ -83,7 +86,12 @@ const HomePage: React.FC = () => {
             <ul>
               {users.map((user) => (
                 <li key={user._id} className="py-2 border-b last:border-b-0">
-                  <span className="font-medium">{user.username}</span>
+                  <button
+                    onClick={() => handleUsernameClick(user.username)}
+                    className="font-medium text-slate-600 hover:underline cursor-pointer"
+                  >
+                    {user.username}
+                  </button>
                 </li>
               ))}
             </ul>
